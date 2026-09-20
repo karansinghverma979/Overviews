@@ -51,14 +51,24 @@
 
 ## 🚀 30-Second Quickstart
 
-### Option A: 1-Line Universal PowerShell Installer
+### Option A: Standalone Binary (Zero Dependencies)
+Download the standalone executable directly (no installation needed):
+* 💾 **[Download Overviews.exe v2.0.0 (225 KB)](https://github.com/karansinghverma979/Overviews/releases/download/v2.0.0/Overviews.exe)**
+
+**1-Line PowerShell Auto-Download:**
+```powershell
+New-Item -ItemType Directory -Path "$HOME\.local\bin" -Force | Out-Null
+irm https://github.com/karansinghverma979/Overviews/releases/download/v2.0.0/Overviews.exe -OutFile "$HOME\.local\bin\Overviews.exe"
+```
+
+### Option B: 1-Line Universal PowerShell Installer
 Execute the universal setup script directly in your terminal (compatible with **Windows PowerShell 5.1 and PowerShell 7+**):
 
 ```powershell
 irm https://raw.githubusercontent.com/karansinghverma979/Overviews/main/Overviews_SelfContained_Setup.ps1 | iex
 ```
 
-### Option B: Local Developer Compilation
+### Option C: Local Developer Compilation
 ```powershell
 git clone https://github.com/karansinghverma979/Overviews.git
 cd Overviews
